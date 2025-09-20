@@ -29,7 +29,6 @@ def build_json(version, answers):
         "subjects": subjects,
         "questions_per_subject": 20,
         "total_questions": 100,
-        # ⚠️ bubble_positions = placeholder, you must measure actual (x, y, w, h) per option
         "bubble_positions": [],
         "correct_answers": answers
     }
@@ -54,4 +53,4 @@ with open(os.path.join(output_folder, "setA.json"), "w") as f:
 with open(os.path.join(output_folder, "setB.json"), "w") as f:
     json.dump(set_b_json, f, indent=2)
 
-print("✅ JSON keys generated: setA.json and setB.json")
+print("JSON keys generated: setA.json and setB.json")

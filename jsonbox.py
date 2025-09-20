@@ -37,6 +37,6 @@ for subj_index, subj in enumerate(subjects):
 with open("setA_bubbles.json", "w") as f:
     json.dump(bubble_positions, f, indent=2)
 
-print("✅ Bubble positions generated in setA_bubbles.json")
+print("Bubble positions generated in setA_bubbles.json")
 for item in data:
     print(item["box"])

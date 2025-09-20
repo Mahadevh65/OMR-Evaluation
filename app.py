@@ -6,6 +6,14 @@ import sqlite3
 import uuid
 import json
 
+# conn = sqlite3.connect('data/results.db')
+# c = conn.cursor()
+# c.execute("SELECT * FROM results WHERE student_name=?",("Mahadev",))
+# # conn.commit()
+# # conn.close()
+# user=c.fetchone()
+# print(user)
+
 UPLOAD_FOLDER = 'static/uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
@@ -40,6 +48,7 @@ def upload_file():
         student_name = request.form.get('student_name')
         sheet_version = request.form.get('sheet_version')
         file = request.files.get('file')
+            
         if not student_name or not sheet_version or not file:
             return "Missing data", 400
         if file and allowed_file(file.filename):
