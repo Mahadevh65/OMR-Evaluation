@@ -1,6 +1,5 @@
+pip>=25.2
 Flask
 opencv-python
 numpy
-Pillow
 sqlite3
-Werkzeug
