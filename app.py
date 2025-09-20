@@ -80,4 +80,4 @@ def upload_file():
         return render_template("upload.html", versions=versions)
 
 if __name__ == "__main__":
-    app.run(debug=True, port="8051", use_reloader=False)
+    app.run(debug=True, port="6578", use_reloader=False)
