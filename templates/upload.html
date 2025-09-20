@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>OMR Upload</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+  </head>
+  <body>
+    <h1>Upload OMR Sheet</h1>
+    <form method="post" enctype="multipart/form-data">
+      Student name: <input type="text" name="student_name" /><br/>
+      Sheet version: 
+      <select name="sheet_version">
+        {% for v in versions %}
+          <option value="{{v}}">{{v}}</option>
+        {% endfor %}
+      </select><br/>
+      Upload image file: <input type="file" name="file" /><br/>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
