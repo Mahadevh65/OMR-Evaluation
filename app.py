@@ -5,7 +5,7 @@ from omr_processor import process_image
 import sqlite3
 import uuid
 import json
-
+os.environ["STREAMLIT_SERVER_FILE_WATCHER_TYPE"] = "none"
 # conn = sqlite3.connect('data/results.db')
 # c = conn.cursor()
 # c.execute("SELECT * FROM results WHERE student_name=?",("Mahadev",))
