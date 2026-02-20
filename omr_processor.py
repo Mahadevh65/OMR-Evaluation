@@ -58,10 +58,6 @@ def threshold_image(warped):
     return thresh
 
 def extract_responses(thresh_img, answer_key):
-    """
-    thresh_img: binary image (inverted so bubbles are white on black background)
-    answer_key: loaded JSON dict
-    """
     h, w = thresh_img.shape
     results = {}
     # for each bubble position
