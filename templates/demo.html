@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMR Sheet Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+        }
+        .question {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .options {
+            margin-top: 10px;
+        }
+        .option {
+            margin: 8px 0;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>OMR Sheet Demo</h1>
+    <form>
+        {% for i in "12345" %}
+        <div class="question">
+            <h3>Question {{ forloop.counter }}</h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="q{{ forloop.counter }}"> Option A</label>
+                <label class="option"><input type="radio" name="q{{ forloop.counter }}"> Option B</label>
+                <label class="option"><input type="radio" name="q{{ forloop.counter }}"> Option C</label>
+                <label class="option"><input type="radio" name="q{{ forloop.counter }}"> Option D</label>
+            </div>
+        </div>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
